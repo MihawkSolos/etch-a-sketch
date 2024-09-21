@@ -1,5 +1,29 @@
+// function to create the grid
+let createGrid = (userInput) => {
+    delGrid();
+    for(let i=0; i < userInput * userInput; i++){
+        const div = document.createElement('div');
+        div.classList.add('item'); // adds 'item' class for the new div
+        div.textContent = i;
+        container.appendChild(div);
+    }
+};
+
+// function to delete grid
+let delGrid = () => {
+    const container = document.querySelector('.container');
+    const items = container.querySelectorAll('.item');
+
+    items.forEach(item => {
+        item.remove();
+    })
+};
+
 // btn container that has all the square divs within
 const container = document.querySelector('.container');
+
+// create the default 16 * 16 grid
+createGrid(16);
 
 // button that asks for user input on size of new grid
 const gridBtn = document.querySelector('.gridBtn');
@@ -15,18 +39,8 @@ gridBtn.addEventListener('click', () => {
     }
 
     // create and call delGrid function.
-    // create and call createGrid function.
-
 });
 
-// function to create the grid
-let createGrid = (userInput) => {
-    for(let i=0; i < userInput * userInput; i++){
-        const div = document.createElement('div');
-        div.classList.add('item'); // adds 'item' class for the new div
-        div.textContent = i;
-        container.appendChild(div);
-    }
-}
+
 
 

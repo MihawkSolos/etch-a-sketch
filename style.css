@@ -4,7 +4,14 @@
 }
 
 .item {
-
+    height: 30px;
+    width: 30px;
+    border: 1px black solid;
+    padding: 8px;
+    margin: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .item:hover {
