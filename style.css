@@ -1,19 +1,22 @@
 .container {
     display: flex;
     flex-wrap: wrap; /* lets the divs go to next line */
+    width: 640px;
 }
 
 .item {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     border: 1px black solid;
     padding: 8px;
-    margin: 35px;
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*
 .item:hover {
-    background-color: blue;
+    background-color: #96d0e4;
 }
+*/

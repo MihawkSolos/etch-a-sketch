@@ -4,7 +4,17 @@ let createGrid = (userInput) => {
     for(let i=0; i < userInput * userInput; i++){
         const div = document.createElement('div');
         div.classList.add('item'); // adds 'item' class for the new div
-        div.textContent = i;
+        // div.textContent = i;
+
+        // Add mouseover event listener for random background color
+        div.addEventListener('mouseover', () => {
+            const randomColor = `rgb(${Math.floor(Math.random() * 256)},
+             ${Math.floor(Math.random() * 256)},
+              ${Math.floor(Math.random() * 256)})`;
+              
+            div.style.backgroundColor = randomColor;
+        });
+
         container.appendChild(div);
     }
 };
@@ -37,8 +47,6 @@ gridBtn.addEventListener('click', () => {
     } else {
         createGrid(userInput);
     }
-
-    // create and call delGrid function.
 });
 
 
